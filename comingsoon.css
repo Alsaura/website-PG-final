@@ -1,0 +1,301 @@
+body, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", "sans-serif";
+}
+
+.header {
+    background-color: rgba(237, 237, 237, 0.85);
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+    padding-left: 20px; /* Adjusted padding */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex; /* Flex added */
+    flex-wrap: wrap; /* For responsiveness */
+    justify-content: space-between; /* Distribute space */
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between; /* Adjust spacing */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding-right: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #25274D;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    color: #ff5733;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #25274D;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .logo img {
+        padding-left: 20px;
+    }
+
+    .container, .navbar {
+        padding: 0;
+    }
+
+    .layout-main {
+        padding: 5px 20px 50px 20px; /* Adjusted for mobile padding */
+    }
+}
+
+.highlight {
+    color: #939af3;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.layout-main {
+    padding: 5px 20px 50px 20px; /* Adjusted padding */
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-main h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 32px; /* Adjusted font-size */
+}
+
+.layout-main p {
+    text-align: justify;
+    padding: 40px;
+    font-size:15px
+}
+
+.layout-main img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+}
+
+////////////////////////////////
+
+.layout-description {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 130px;
+    background-color: #043046;
+    color: white;
+}
+
+.layout-description {
+    display: flex;
+    padding: 100px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 60px;
+    position: relative;
+}
+
+.layout-description::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(220, 222, 223, 0.9), rgba(220, 222, 223, 0.9)), url('/halftone_background_12.jpg');
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.9; /* Untuk mengatur opacity gambar */
+    pointer-events: none; /* Agar elemen di bawah ::before masih dapat menerima event seperti klik */
+    z-index: -1; /* Agar gambar berada di belakang konten layout-description */
+}
+
+.box {
+    width: 250px;
+    height: 320px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    padding: 3px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    opacity: 0;  /* Agar awalnya setiap box transparan */
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.box.umkm {
+    background-image: url('/layout/umkm.jpg');
+    animation-delay: 0.5s;
+}
+
+.box.kuliner {
+    background-image: url('/layout/kuliner.jpg');
+    animation-delay: 1s;
+}
+
+.box.panggung {
+    background-image: url('/layout/panggung.jpg');
+    animation-delay: 1.5s;
+}
+
+.box.VIP {
+    background-image: url('/layout/Cars-parked-in-parking-lot.jpg');
+    animation-delay: 2s;
+}
+
+.box.SGS {
+    background-image: url('/layout/istockphoto-115999822-612x612.jpg');
+    animation-delay: 2.5s;
+}
+
+.box.canteen {
+    background-image: url('/layout/kantin-sekolah.jpg');
+    animation-delay: 3s;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to top, rgba(2, 48, 71, 0.9), transparent);
+    z-index: 1;
+}
+
+.box h2, .box p {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.box h2 {
+    margin: 0 15px 5px;
+    font-size: 24px;
+    text-align: left;
+}
+
+.box p {
+    margin: 0 15px 15px;
+    font-size: 10px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .layout-description {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* =================================================================
