@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+} 
 body, h2, p {
     margin: 0;
     padding: 0;
@@ -57,7 +60,19 @@ body, h2, p {
 .nav-links a:hover {
     color: #ff5733;
 }
+.nav-links li a[href="pembelian-tiket.html"] {
+    border: 2px ; /* Menentukan border 2px dengan warna biru */
+    color: #fff;
+    background : #25274D;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Shadow dengan offset 3px ke kanan dan ke bawah dengan blur radius 10px dan warna hitam dengan opasitas 0.2 */
+    padding: 5px 10px; /* Menambahkan padding agar tampilan lebih bagus */
+    transition: 0.3s; /* Transisi untuk efek hover */
+}
 
+.nav-links li a[href="pembelian-tiket.html"]:hover {
+    background:  #13a70a; /* Mengubah warna border saat di-hover */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Meningkatkan efek shadow saat di-hover */
+}
 .hamburger-menu {
     display: none;
     flex-direction: column;

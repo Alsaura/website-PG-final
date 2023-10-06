@@ -59,6 +59,12 @@ hamburgerMenu.addEventListener('click', () => {
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("h1").style.opacity = "1";
     document.querySelector("h1").style.transform = "translateY(0)";
-    document.querySelector("p").style.opacity = "4";
+    document.querySelector("p").style.opacity = "1";
     document.querySelector("p").style.transform = "translateY(0)";
+
+    document.querySelector("#generasi-title").style.opacity = "1";
+    document.querySelector("#generasi-title").style.transform = "translateY(0)";
+    document.querySelector("#generasi-description").style.opacity = "1"; // Perbaiki ke "1"
+    document.querySelector("#generasi-description").style.transform = "translateY(0)";
+
 });
